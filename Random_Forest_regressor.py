@@ -2,7 +2,6 @@ import numpy as np
 from Decision_tree_regressor import DTR
 from matplotlib import pyplot as plt
 import copy
-import yonezu as yz
 
 class Random_Forest(object):
 
@@ -63,7 +62,7 @@ if __name__ == "__main__":
 	pred = clf.predict(testX)
 
 	#"""
-	yz.set_font()
+	#yz.set_font()
 	plt.grid(True)
 	plt.ylim(-0.065,0.1)
 	plt.xlabel(r"$x$",fontsize=20)

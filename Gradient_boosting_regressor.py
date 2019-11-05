@@ -70,6 +70,7 @@ if __name__ == "__main__":
 		pred = regressor.predict(testX)
 
 		#"""
+		fig = plt.figure()
 		plt.grid(True)
 		plt.title("# of tree:"+str(i))
 		plt.ylim(-0.065,0.1)
@@ -78,6 +79,7 @@ if __name__ == "__main__":
 		plt.plot(testX,testY,"o",color="red",marker="+",label="test")
 		plt.plot(testX[np.argsort(testX[:,0]),:],pred[np.argsort(testX[:,0])],"-",color="blue",marker="*",label="pred")
 		plt.legend()
-		plt.pause(0.001)
+		#plt.pause(0.001)
+		plt.savefig(str(i)+".jpg")
 		plt.close()
 		#"""
